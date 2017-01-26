@@ -11,6 +11,18 @@ class App extends Component {
       <div className="App">
         <Auth />
         This is app
+        <button
+          onClick={
+            () => {
+              this.props.dispatch({
+                type: 'USER_FETCH_REQUESTED',
+                userId: 1
+              });
+            }
+          }
+        >
+          Fetch user
+        </button>
       </div>
     );
   }
