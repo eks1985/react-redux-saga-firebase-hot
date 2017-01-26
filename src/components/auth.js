@@ -46,9 +46,6 @@ let Auth = ({
 };
 
 export default connect(
-  state => {
-    const { status, uid, email }  = state.auth;
-    return { status, uid, email };
-  },
+  state => ({ ...state.auth }),
   { openAuthAnonimously, logoutUser }
 )(Auth);
